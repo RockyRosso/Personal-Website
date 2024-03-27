@@ -1,0 +1,19 @@
+.pad-20-half {
+    $pad: 20px;
+
+    padding: calc($pad / 2) $pad calc($pad / 2) $pad;
+}
+
+.pad-20 {
+    padding: 20px;
+}
+
+.pad-10 {
+    padding: 10px;
+}
+
+.pad-10-half {
+    $pad: 10px;
+
+    padding: calc($pad / 2) $pad calc($pad / 2) $pad;
+}

@@ -1,0 +1,50 @@
+---
+
+import SiteLayout from '../layouts/siteLayout.astro';
+
+import '../assets/styles/base.scss';
+import Logo from "../components/Logo.vue";
+import InfoContainer from '../components/InfoContainer.vue';
+
+---
+
+<SiteLayout title="Home">
+	<div class="container">
+		<h1 class="title scroll-anim-reveal">Hello there! 👋</h1>
+		<h1 class="title scroll-anim-reveal">My name is...</h1>
+	</div>
+
+	<div style="margin-top: 400px"></div>
+
+	<Logo size={250} />
+	<InfoContainer animate>
+		<div>
+			<h1>Skills:</h1>
+			<ul>
+				<li><p>Fullstack Web Development</p></li>
+				<li><p>Discord Bots</p></li>
+				<li><p>Game Development</p></li>
+			</ul>
+		</div>
+
+		<div>
+			<h1>Tools:</h1>
+			<ul>
+				<li><p>Visual Studio Code</p></li>
+				<li><p>Trello</p></li>
+				<li><p>Netlify</p></li>
+				<li><p>AWS</p></li>
+				<li><p>Google Cloud</p></li>
+			</ul>
+		</div>
+
+		<div>
+			<h1>Socials:</h1>
+			<ul>
+				<li><a target="_blank" href="https://github.com/RockyRosso">GitHub</a></li>
+				<li><a target="_blank" href="https://twitter.com/RockyRosso">Twitter</a></li>
+				<li><p>Discord (@rockyrosso)</p></li>
+			</ul>
+		</div>
+	</InfoContainer>
+</SiteLayout>

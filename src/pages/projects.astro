@@ -1,0 +1,13 @@
+---
+
+import SiteLayout from "../layouts/siteLayout.astro";
+import ProjectContainer from '../components/ProjectContainer.vue';
+
+---
+
+<SiteLayout title="Projects">
+    <div class="container">
+        <h1 class="title scroll-anim-reveal">Projects</h1>
+        <ProjectContainer client:load />
+    </div>
+</SiteLayout>

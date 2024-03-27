@@ -1,0 +1,21 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.align-top {
+        align-items: start;
+    }
+
+    &.space-between {
+        justify-content: space-between;
+    }
+
+    &.justify-left {
+        justify-content: start;
+    }
+
+    &.gap {
+        gap: 10px;
+    }
+}

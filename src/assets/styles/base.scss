@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@500&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@import './presents/padding.scss';
+@import './presents/flex.scss';
+@import './presents/grid.scss';
+
+$primary: #181818;
+$secondary: hsl(0, 0%, 12.5%);
+
+$success: hsl(135, 75%, 40%);
+
+$txt: #fff;
+
+body {
+    background-color: $primary;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.page-container {
+    width: 100%;
+    height: 100%;
+}
+
+li,
+p,
+a,
+h1,
+h2,
+h3 {
+    color: $txt;
+    font-family: 'Nunito', sans-serif;
+}
+
+h1,
+h2 {
+    font-weight: 800;
+}
+
+ul,
+li {
+    &.nobullet {
+        list-style: none;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    gap: 20px;
+}
+
+p {
+    word-break: break-word;
+}
+
+.title {
+    font-size: 8vw;
+}
+
+// Animations
+
+@keyframes scrollanim {
+    from {
+        opacity: 0;
+        top: 20px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+.scroll-anim {
+    opacity: 0;
+}
+
+.scroll-anim-reveal {
+    position: relative;
+
+    animation-duration: 1s;
+    animation-name: scrollanim;
+    animation-fill-mode: both;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+
+    background-color: $secondary;
+
+    margin-top: 200px;
+}
+
+// Components
+
+button,
+a {
+    &[data-btn-style='primary'] {
+        background-color: $primary;
+    }
+
+    &[data-btn-style='secondary'] {
+        background-color: $secondary;
+    }
+
+    &[data-btn-style='success'] {
+        background-color: $success;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    &:not(:disabled) {
+        &:hover {
+            filter: brightness(70%);
+            transition: ease-in-out 0.2s;
+        }
+    }
+}
+
+.pfp {
+    border-radius: 100%;
+}
+
+button,
+.button {
+    $pad: 15px;
+
+    background-color: $primary;
+
+    color: $txt;
+    font-family: 'Nunito', sans-serif;
+
+    text-decoration: none;
+    font-size: 1.5em;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: calc($pad / 2) $pad calc($pad / 2) $pad;
+
+    cursor: pointer;
+}
+
+hr {
+    border-style: solid;
+    border-color: $secondary;
+    border-top-width: 5px;
+
+    border-radius: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+.container-videoplayer {
+    position: relative;
+
+    height: 512px;
+
+    max-width: 910px;
+}
