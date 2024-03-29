@@ -1,0 +1,11 @@
+---
+import SiteLayout from "../layouts/siteLayout.astro";
+import ContactForm from '../components/contactForm.vue';
+
+---
+
+<SiteLayout title="Contact">
+    <div class="container con-margins con-center">
+        <ContactForm client:load />
+    </div>
+</SiteLayout>

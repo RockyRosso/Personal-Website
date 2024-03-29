@@ -1,6 +1,6 @@
 <template>
     <div
-        :class="`container grid-layout align-top ${animate ? 'scroll-anim' : ''}`"
+        :class="`container con-margins grid-layout align-top ${animate ? 'scroll-anim' : ''}`"
         :style="`gap: ${gridgap ? gridgap : '20'}px`"
     >
         <slot />

@@ -3,17 +3,21 @@
 @import './presents/padding.scss';
 @import './presents/flex.scss';
 @import './presents/grid.scss';
+@import './presents/conatiners.scss';
 
 $primary: #181818;
 $secondary: hsl(0, 0%, 12.5%);
 
 $success: hsl(135, 75%, 40%);
+$danger: hsl(0, 75%, 40%);
 
 $txt: #fff;
 
 body {
     background-color: $primary;
     margin: 0;
+
+    overflow-x: hidden;
 }
 
 * {
@@ -30,9 +34,10 @@ main {
 
 .page-container {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
+label,
 li,
 p,
 a,
@@ -41,6 +46,14 @@ h2,
 h3 {
     color: $txt;
     font-family: 'Nunito', sans-serif;
+
+    &[data-text-style="success"] {
+        color: $success;
+    }
+
+    &[data-text-style="danger"] {
+        color: $danger;
+    }
 }
 
 h1,
@@ -63,13 +76,26 @@ li {
 
 p {
     word-break: break-word;
+
+    &.nomargin {
+        margin: 0;
+    }
 }
 
 .title {
     font-size: 8vw;
 }
 
-// Animations
+footer {
+    position: relative;
+    bottom: 0;
+
+    background-color: $secondary;
+
+    margin-top: 100px;
+}
+
+// Animations //
 
 @keyframes scrollanim {
     from {
@@ -95,16 +121,31 @@ p {
     animation-fill-mode: both;
 }
 
-footer {
+// Mixins //
+
+@mixin form($width: 500px) {
+    $pad: 20px;
+
     position: relative;
-    bottom: 0;
+
+    left: 50%;
+
+    transform: translate(-50%);
+
+    display: grid;
+    gap: 20px;
+
+    max-width: $width;
+    min-width: 10px;
 
     background-color: $secondary;
 
-    margin-top: 200px;
+    padding: $pad $pad $pad $pad;
+
+    border-radius: 20px;
 }
 
-// Components
+// Components //
 
 button,
 a {
@@ -165,14 +206,59 @@ hr {
     border-radius: 20px;
 }
 
-.container {
-    text-align: center;
+// Forms
+
+.form-input {
+    $spacing: 5px;
+
+    display: grid;
+    gap: 10px;
+
+    text-align: start;
+
+    margin-top: $spacing;
+    margin-bottom: $spacing;
+
+    &.checkbox {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form-label {
+        $spacing: 5px;
+    
+        display: grid;
+        gap: 10px;
+    
+        margin-top: $spacing;
+        margin-bottom: $spacing;
+    }
 }
 
-.container-videoplayer {
-    position: relative;
+textarea,
+input[type='email'],
+input[type='password'],
+input[type='text'] {
+    $inp-pad: 10px;
 
-    height: 512px;
+    color: $txt;
 
-    max-width: 910px;
+    background-color: $primary;
+
+    padding: $inp-pad $inp-pad $inp-pad $inp-pad;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    
+
+    border: none;
+
+    &[data-input-style='primary'] {
+        background-color: $primary;
+    }
+}
+
+textarea {
+    resize: vertical;
+    min-height: 200px;
 }

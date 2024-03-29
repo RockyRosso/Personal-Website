@@ -1,0 +1,27 @@
+.container {
+    text-align: center;
+
+    &.con-margins {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.con-90-width {
+        width: 90%;
+    }
+
+    &.con-center {
+        position: relative;
+
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+.container-videoplayer {
+    position: relative;
+
+    height: 512px;
+
+    max-width: 910px;
+}

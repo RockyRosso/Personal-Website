@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container con-margins grid-list">
         <div
             v-if="projects.length > 0"
             :class="i === 0 ? 'scroll-anim-reveal' : 'scroll-anim'"
