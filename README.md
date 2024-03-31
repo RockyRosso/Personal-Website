@@ -1,3 +1,3 @@
 # Personal Website
 
-Personal website to showcase and blogs (soon)
+Personal website to showcase projects and blogs (soon)
