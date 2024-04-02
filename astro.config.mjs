@@ -17,4 +17,8 @@ export default defineConfig({
             transformer: 'postcss',
         },
     },
+
+    build: {
+        assets: 'assets'
+    }
 });
