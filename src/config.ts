@@ -1,3 +1,3 @@
 export default {
-    apiBase: 'https://api.rocky-rosso.xyz',
+    apiBase: 'https://api.rockyrosso.xyz',
 };
