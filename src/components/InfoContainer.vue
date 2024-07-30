@@ -1,7 +1,7 @@
 <template>
     <div
         :class="`container con-margins grid-layout align-top ${animate ? 'scroll-anim' : ''}`"
-        :style="`gap: ${gridgap ? gridgap : '20'}px`"
+        :style="`gap: ${gridgap ? gridgap : '20'}px; max-width: 70%;`"
     >
         <slot />
     </div>
