@@ -14,8 +14,11 @@ const { title, includemargin } = Astro.props;
 	<head>
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-HZR35K385V"></script>
 		<script>
+			// @ts-nocheck
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
+			function gtag(){
+				dataLayer.push(arguments);
+			}
 			gtag('js', new Date());
 
 			gtag('config', 'G-HZR35K385V');
