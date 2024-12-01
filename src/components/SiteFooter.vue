@@ -8,7 +8,7 @@
             <a
                 class="button"
                 data-btn-style="success"
-                href="https://www.paypal.com/donate/?business=YQH2Z4CKRGEAY&no_recurring=0&currency_code=USD"
+                href="https://buymeacoffee.com/rockyrosso"
                 >Donate</a
             >
         </div>
